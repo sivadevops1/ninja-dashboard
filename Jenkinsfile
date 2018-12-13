@@ -8,7 +8,7 @@ stages {
      echo "Executing CodeCheckout Stage"
      sh 'pwd'
      sh 'whoami'
-     def mvnHome = tool 'maven-3'
+     sh 'yum install -y maven'
      }
     }
    } /* codecheckout stage */
@@ -16,8 +16,7 @@ stages {
  stage('build customer app code') { 
  steps {
   script {
-       echo "I am here"
-    def mvnHome = tool 'maven-3'
+     echo "I moved to build customer app code"
      sh 'mvn clean install'
     }
   }
