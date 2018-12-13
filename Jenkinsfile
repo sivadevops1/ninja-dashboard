@@ -8,7 +8,7 @@ stages {
      echo "Executing CodeCheckout Stage"
      sh 'pwd'
      sh 'whoami'
-     sh 'yum install -y maven'
+     def mvnHome = tool 'maven-3'
      }
     }
    } /* codecheckout stage */
