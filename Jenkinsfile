@@ -5,6 +5,9 @@ stages {
  steps {
  script {
     checkout scm
+     echo "Executing CodeCheckout Stage"
+     pwd
+     whoami
      def mvnHome = tool 'maven-3'
      }
     }
